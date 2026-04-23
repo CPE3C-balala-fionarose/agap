@@ -1,0 +1,186 @@
+.welcome-page {
+  min-height: 100vh;
+  background-color: #dbe4ef;
+  background-image:
+    linear-gradient(rgba(219, 228, 239, 0.54), rgba(219, 228, 239, 0.54)),
+    url("../../assets/welcome-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 32%;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0f172a;
+}
+
+.welcome-header {
+  background: #1f5f9f;
+  color: #fff;
+}
+
+.welcome-header-inner {
+  /* sizing from siteChrome .app-nav-inner */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.welcome-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.welcome-brand-logo {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.welcome-brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.welcome-brand-text--light {
+  color: #fff;
+}
+
+.welcome-brand-text {
+  display: grid;
+  gap: 1px;
+}
+
+.welcome-brand-text p {
+  margin: 0;
+}
+
+.welcome-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.welcome-nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.welcome-nav__link:hover {
+  text-decoration: underline;
+}
+
+.welcome-main {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 20px;
+  background: transparent;
+}
+
+.welcome-search-card {
+  width: min(680px, 94vw);
+  background: rgba(242, 245, 251, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+  padding: 32px 36px 30px;
+  text-align: center;
+}
+
+.welcome-search-card h1 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 50px;
+  line-height: 1.06;
+  font-weight: 700;
+}
+
+.welcome-search-card p {
+  margin: 0 auto 24px;
+  max-width: 36ch;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #1e293b;
+}
+
+.welcome-search-row {
+  position: relative;
+}
+
+.welcome-search-row input {
+  width: 100%;
+  height: 54px;
+  border-radius: 5px;
+  border: 2px solid #111827;
+  background: #edf2f8;
+  font-size: 18px;
+  color: #0f172a;
+  padding: 0 58px 0 46px;
+  outline: none;
+}
+
+.welcome-search-row input::placeholder {
+  color: #9ca3af;
+}
+
+.welcome-input-icon-left {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #1f5f9f;
+}
+
+.welcome-search-row button {
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #1f5f9f;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.welcome-search-row button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.welcome-search-row input:disabled {
+  opacity: 0.85;
+}
+
+.welcome-search-error {
+  margin: 12px 0 0;
+  color: #b91c1c;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.welcome-spacer {
+  min-height: 220px;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .welcome-nav {
+    gap: 14px;
+  }
+
+  .welcome-search-card h1 {
+    font-size: 38px;
+  }
+
+  .welcome-search-card p {
+    font-size: 16px;
+  }
+}

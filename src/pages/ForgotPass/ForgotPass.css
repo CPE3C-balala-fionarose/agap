@@ -1,0 +1,234 @@
+/* Forgot password — layout, slightly larger card, responsive */
+
+.forgot-password-page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: max(24px, env(safe-area-inset-top, 0px))
+    max(20px, env(safe-area-inset-right, 0px))
+    max(24px, env(safe-area-inset-bottom, 0px))
+    max(20px, env(safe-area-inset-left, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef0f5;
+}
+
+.forgot-password-page *,
+.forgot-password-page *::before,
+.forgot-password-page *::after {
+  box-sizing: border-box;
+}
+
+.forgot-password-card {
+  width: 100%;
+  max-width: min(40rem, 100%);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: clamp(28px, 5vw, 48px) clamp(22px, 4vw, 44px);
+}
+
+.forgot-password-title {
+  margin: 0 0 10px;
+  color: #121212;
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.forgot-password-lead {
+  margin: 0 0 clamp(24px, 4vw, 36px);
+  color: #4b5563;
+  font-size: clamp(0.9375rem, 2.2vw, 1.0625rem);
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
+.forgot-password-field {
+  margin-bottom: clamp(20px, 3vw, 28px);
+}
+
+.forgot-password-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: clamp(0.9375rem, 2vw, 1rem);
+  font-weight: 600;
+}
+
+.forgot-password-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 2px solid #cfd3da;
+  border-radius: 10px;
+  background: #f0f1f4;
+  font-size: clamp(16px, 2.4vw, 17px);
+  color: #1f1f1f;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.forgot-password-field input::placeholder {
+  color: #8e96a3;
+}
+
+.forgot-password-field input:focus {
+  border-color: #2d6cae;
+  box-shadow: 0 0 0 4px rgba(45, 108, 174, 0.12);
+  background: #f7f9fc;
+}
+
+.forgot-password-field input.forgot-password-input--error {
+  border-color: #cc2e2e;
+}
+
+.forgot-password-field .forgot-password-error {
+  margin: 8px 0 0;
+  color: #cc2e2e;
+  font-size: 0.875rem;
+}
+
+.forgot-password-submit {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #2d6cae;
+  color: #fff;
+  font-size: clamp(1rem, 2.4vw, 1.0625rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forgot-password-submit:hover {
+  background: #245d98;
+  box-shadow: 0 8px 18px rgba(45, 108, 174, 0.28);
+}
+
+.forgot-password-submit:active {
+  transform: translateY(1px);
+}
+
+.forgot-password-back {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color: #2d6cae;
+  font-size: clamp(0.875rem, 2vw, 0.9375rem);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgot-password-back:hover {
+  color: #1f5388;
+  text-decoration: underline;
+}
+
+/* Success state */
+.forgot-password-success {
+  text-align: center;
+  padding: clamp(12px, 3vw, 24px) 0;
+}
+
+.forgot-password-success-icon {
+  width: clamp(3.5rem, 12vw, 4.5rem);
+  height: clamp(3.5rem, 12vw, 4.5rem);
+  margin: 0 auto clamp(16px, 3vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.forgot-password-success-icon svg {
+  width: clamp(1.75rem, 6vw, 2rem);
+  height: clamp(1.75rem, 6vw, 2rem);
+}
+
+.forgot-password-success h3 {
+  margin: 0 0 10px;
+  color: #121212;
+  font-size: clamp(1.125rem, 3vw, 1.375rem);
+  font-weight: 700;
+}
+
+.forgot-password-success > p {
+  margin: 0 0 clamp(16px, 3vw, 24px);
+  color: #4b5563;
+  font-size: clamp(0.875rem, 2.2vw, 1rem);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.forgot-password-success-email {
+  font-weight: 600;
+  color: #111827;
+}
+
+.forgot-password-success-hint {
+  margin: 0 0 clamp(16px, 3vw, 24px);
+  color: #6b7280;
+  font-size: clamp(0.8125rem, 2vw, 0.875rem);
+  line-height: 1.5;
+}
+
+.forgot-password-success-hint button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #2d6cae;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.forgot-password-success-hint button:hover {
+  color: #1f5388;
+}
+
+.forgot-password-success .forgot-password-submit {
+  margin-bottom: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .forgot-password-card {
+    border-radius: 14px;
+    padding: 22px 18px 20px;
+  }
+
+  .forgot-password-field input {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .forgot-password-submit {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .forgot-password-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .forgot-password-card {
+    padding: 18px 14px 16px;
+  }
+}

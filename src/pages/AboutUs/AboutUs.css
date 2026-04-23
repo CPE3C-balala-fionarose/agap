@@ -1,0 +1,50 @@
+.about-us-page {
+  --about-brand: #2b5f8e;
+  --about-brand-dark: #234d73;
+  --about-accent: #8b1c1c;
+  --about-surface: #f5f5f5;
+  --about-link: #1e73be;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html:has(.about-us-page) {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.about-us-page) {
+    scroll-behavior: auto;
+  }
+}
+
+.about-us-page ::selection {
+  background-color: color-mix(in srgb, var(--about-brand) 28%, transparent);
+  color: inherit;
+}
+
+/* Keyboard focus — nav and footer links */
+.about-us-page nav a:focus-visible,
+.about-us-page nav button:focus-visible,
+.about-us-page .site-footer a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.about-us-page .site-footer a:focus-visible {
+  outline-color: color-mix(in srgb, #fff 85%, var(--about-brand));
+}
+
+.about-us-page .site-footer a[href^='mailto'],
+.about-us-page .site-footer a[href^='tel'] {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+.about-us-page .site-footer a[href^='mailto']:hover,
+.about-us-page .site-footer a[href^='tel']:hover {
+  text-decoration-color: currentColor;
+}

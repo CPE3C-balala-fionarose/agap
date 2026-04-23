@@ -1,0 +1,346 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #eef0f5;
+}
+
+.login-left-panel {
+  position: relative;
+  border-radius: 0 28px 28px 0;
+  overflow: hidden;
+  padding: 26px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("../../assets/login-left-panel.svg") 68% center / cover no-repeat;
+  box-shadow: inset 0 0 90px rgba(5, 29, 72, 0.18);
+}
+
+.login-left-logo {
+  width: 84px;
+  height: auto;
+  object-fit: contain;
+}
+
+.login-left-title {
+  margin: 0 0 160px;
+  color: #ffffff;
+  font-size: clamp(44px, 5.8vw, 72px);
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.login-left-title-text {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.login-left-title-text.is-fading {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.login-right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: min(640px, 100%);
+  border-radius: 14px;
+  background: #edeff4;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 38px 38px 28px;
+  box-sizing: border-box;
+}
+
+.login-card * {
+  box-sizing: border-box;
+}
+
+.login-card h2 {
+  margin: 0 0 24px;
+  color: #121212;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.field-wrap {
+  margin-bottom: 18px;
+}
+
+.field-wrap label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.field-wrap input {
+  width: 100%;
+  border: 2px solid #cfd3da;
+  background: #f0f1f4;
+  height: 52px;
+  padding: 0 14px;
+  font-size: 16px;
+  color: #1f1f1f;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.field-wrap input:focus {
+  border-color: #2d6cae;
+  box-shadow: 0 0 0 4px rgba(45, 108, 174, 0.12);
+  background: #f7f9fc;
+}
+
+.field-wrap input::placeholder {
+  color: #8e96a3;
+  font-size: 14px;
+}
+
+.password-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.password-input-wrap input {
+  padding-right: 72px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #2d6cae;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.password-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.password-toggle:hover {
+  background: rgba(45, 108, 174, 0.12);
+  color: #1f5388;
+}
+
+.field-error {
+  margin: 6px 0 0;
+  color: #cc2e2e;
+  font-size: 14px;
+}
+
+.login-meta-row {
+  margin: 6px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #292929;
+  font-size: 14px;
+}
+
+.remember-me input {
+  width: 16px;
+  height: 16px;
+}
+
+.login-meta-row a {
+  color: #2d6cae;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2e2e2e;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #cfd3da;
+}
+
+.google-btn-wrapper {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.google-btn-wrapper > div {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.google-btn {
+  width: 100%;
+  height: 54px;
+  border: 2px solid #cfd3da;
+  background: #f5f6f9;
+  color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-btn:hover {
+  border-color: #9fb8d3;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(21, 53, 89, 0.08);
+}
+
+.google-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.login-submit-btn {
+  width: 100%;
+  height: 56px;
+  border: 0;
+  border-radius: 6px;
+  background: #2d6cae;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background: #245d98;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(45, 108, 174, 0.3);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-signup-text {
+  margin: 14px 0 0;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.login-signup-text a {
+  color: #2d6cae;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Remove default browser password reveal button */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left-panel {
+    min-height: 320px;
+    border-radius: 0;
+  }
+
+  .login-left-title {
+    margin-bottom: 20px;
+    font-size: clamp(44px, 9vw, 64px);
+  }
+
+  .login-card h2 {
+    font-size: 40px;
+  }
+
+  .field-wrap label {
+    font-size: 20px;
+  }
+
+  .field-wrap input {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .google-btn,
+  .login-submit-btn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .password-toggle {
+    width: 28px;
+    height: 28px;
+    right: 6px;
+  }
+
+  .password-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .password-toggle {
+    width: 26px;
+    height: 26px;
+    right: 4px;
+  }
+
+  .password-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+}
